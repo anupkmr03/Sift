@@ -1,7 +1,6 @@
 # Sift
 
-An offline Elasticsearch / OpenSearch workbench for Windows (Electron), in the same glass style as
-Reel Library, Lumen, Pulse, Graft and Toolbelt. Nothing goes anywhere except to the clusters you add.
+An offline Elasticsearch / OpenSearch workbench for Windows.
 
 ## Build
 
