@@ -1,0 +1,47 @@
+/* Design tokens: change the look of the whole app from here. */
+:root {
+  /* Colours */
+  --bg: #0a0d1c;
+  --text: #eef1ff;
+  --text-soft: #dfe4f7;
+  --muted: #b8c0dc;
+  --accent: #8be3ff;
+  --accent-light: #c4f1ff;
+  --accent-fill: rgba(139, 227, 255, 0.85);
+  --accent-tint: rgba(139, 227, 255, 0.16);
+  --accent-line: rgba(139, 227, 255, 0.45);
+  --accent-ink: #06202b;
+  --accent-glow: rgba(0, 184, 217, 0.38);
+  --pink: #ff4d8d;
+  --danger: #ff8a9a;
+
+  /* Background glows */
+  --orb-1: #6d4aff;
+  --orb-2: #00b8d9;
+  --orb-3: #ff4d8d;
+
+  /* Glass */
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass-hover: rgba(255, 255, 255, 0.12);
+  --glass-strong: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --glass-border-hover: rgba(255, 255, 255, 0.32);
+  --glass-dark: rgba(10, 13, 28, 0.48);
+  --blur: 24px;
+  --blur-sm: 12px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.5);
+
+  /* Shape */
+  --radius-xl: 22px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  /* Type (system fonts so it works fully offline) */
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "JetBrains Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
+
+  /* Grid card width, changed by the Size slider */
+  --card-min: 240px;
+}

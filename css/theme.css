@@ -1,0 +1,154 @@
+/* Themes and look options (js/ui/appearance.js sets these on <html>):
+     data-theme="light"      light theme (the player stays dark — it's for watching)
+     data-bg="accent"        background glows take the accent's colour (set as --orb-* by JS) */
+
+/* =========================== Light theme =========================== */
+html[data-theme="light"] {
+  --bg: #eef1f8;
+  --text: #151a2e;
+  --text-soft: #2b3252;
+  --muted: #5b6382;
+  --glass: rgba(255, 255, 255, 0.66);
+  --glass-hover: rgba(255, 255, 255, 0.9);
+  --glass-strong: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(30, 40, 80, 0.12);
+  --glass-border-hover: rgba(30, 40, 80, 0.26);
+  --glass-dark: rgba(255, 255, 255, 0.8);
+  --shadow: 0 8px 28px rgba(30, 40, 90, 0.10);
+  --shadow-lg: 0 24px 70px rgba(30, 40, 90, 0.20);
+  --danger: #d0304a;
+  --ink-1: rgba(30, 40, 80, 0.05);   /* subtle fill */
+  --ink-2: rgba(30, 40, 80, 0.09);   /* hover fill */
+  --ink-3: rgba(30, 40, 80, 0.14);   /* lines / tracks */
+  color-scheme: light;
+}
+html[data-theme="light"] body { background: var(--bg); }
+html[data-theme="light"] .orbs { opacity: .55; }
+html[data-theme="light"] .orb-1 { opacity: .35; }
+html[data-theme="light"] .orb-2 { opacity: .30; }
+html[data-theme="light"] .orb-3 { opacity: .22; }
+
+/* Surfaces that were dark-tinted */
+html[data-theme="light"] .menu,
+html[data-theme="light"] .dialog,
+html[data-theme="light"] .view-panel,
+html[data-theme="light"] .selection-bar,
+html[data-theme="light"] .upscale-panel,
+html[data-theme="light"] .cleanup-bar,
+html[data-theme="light"] .set-search,
+html[data-theme="light"] .toast { background: rgba(255, 255, 255, 0.96); border-color: var(--glass-border); color: var(--text); }
+html[data-theme="light"] .dialog-overlay { background: rgba(225, 230, 242, 0.55); }
+html[data-theme="light"] .titlebar { background: rgba(255, 255, 255, 0.55); border-bottom-color: var(--ink-3); color: var(--muted); }
+html[data-theme="light"] .dropzone { background: rgba(230, 234, 246, 0.6); }
+html[data-theme="light"] .hero { background: rgba(255, 255, 255, 0.5); }
+html[data-theme="light"] .hero-shade { background: linear-gradient(90deg, rgba(255,255,255,.15), rgba(255,255,255,.55) 45%, rgba(255,255,255,.78)); }
+html[data-theme="light"] .hero-bg { opacity: .45; }
+html[data-theme="light"] .hero-thumb { border-color: rgba(255,255,255,.8); box-shadow: 0 14px 34px rgba(30,40,90,.22); }
+
+/* Controls */
+html[data-theme="light"] .select { background-color: rgba(255, 255, 255, 0.85); color: var(--text);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235b6382' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); }
+html[data-theme="light"] .select option { background: #fff; color: var(--text); }
+html[data-theme="light"] .btn-ghost,
+html[data-theme="light"] .icon-btn,
+html[data-theme="light"] .chip,
+html[data-theme="light"] .search,
+html[data-theme="light"] .field,
+html[data-theme="light"] .segmented,
+html[data-theme="light"] .tag-chip,
+html[data-theme="light"] .card-tag.is-more { background: rgba(255, 255, 255, 0.7); border-color: var(--glass-border); color: var(--text-soft); }
+html[data-theme="light"] .icon-btn:hover,
+html[data-theme="light"] .btn-ghost:hover,
+html[data-theme="light"] .chip:hover { background: #fff; border-color: var(--glass-border-hover); }
+html[data-theme="light"] .btn-dashed,
+html[data-theme="light"] .filter-save { border-color: var(--ink-3); color: var(--muted); }
+html[data-theme="light"] .search input::placeholder,
+html[data-theme="light"] .set-search-input::placeholder { color: #8189a6; }
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .btn-primary:hover { background: var(--accent-fill); color: var(--accent-ink); }
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .chip.is-active,
+html[data-theme="light"] #sortDir[aria-pressed="true"],
+html[data-theme="light"] #blurBtn[aria-pressed="true"] { border-color: transparent; }
+html[data-theme="light"] .nav-item:hover,
+html[data-theme="light"] .tree-caret:hover,
+html[data-theme="light"] .menu-item:hover,
+html[data-theme="light"] .menu-item:focus-visible,
+html[data-theme="light"] .lrow:hover,
+html[data-theme="light"] .hist-row:hover,
+html[data-theme="light"] .cl-row:hover,
+html[data-theme="light"] .rank-item:hover,
+html[data-theme="light"] .filter-x:hover { background: var(--ink-2); }
+html[data-theme="light"] .nav-item.is-active { color: var(--text); }
+html[data-theme="light"] .filter-text { color: var(--text); }
+html[data-theme="light"] .progress,
+html[data-theme="light"] .bar-track,
+html[data-theme="light"] .cf-bar,
+html[data-theme="light"] .switch { background: var(--ink-3); }
+html[data-theme="light"] .switch:checked { background: var(--accent-fill); }
+html[data-theme="light"] .menu-sep,
+html[data-theme="light"] .vp-sep,
+html[data-theme="light"] .sel-sep { background: var(--ink-3); }
+html[data-theme="light"] .menu-title { border-bottom-color: var(--ink-3); }
+html[data-theme="light"] kbd { background: var(--ink-1); border-color: var(--ink-3); color: var(--text-soft); }
+html[data-theme="light"] .swatch { border-color: rgba(30,40,80,.18); }
+html[data-theme="light"] .swatch[aria-checked="true"] { border-color: var(--text); box-shadow: 0 0 0 3px rgba(30,40,80,.12), 0 0 12px var(--swatch); }
+html[data-theme="light"] .star { color: rgba(30, 40, 80, 0.22); }
+html[data-theme="light"] .star.is-on { color: #e6a700; }
+
+/* Cards, lists and pages */
+html[data-theme="light"] .card { background: rgba(255, 255, 255, 0.72); box-shadow: 0 6px 20px rgba(30,40,90,.08); }
+html[data-theme="light"] .card:hover { background: #fff; }
+html[data-theme="light"] .thumb,
+html[data-theme="light"] .lthumb,
+html[data-theme="light"] .shelf-thumb,
+html[data-theme="light"] .dupe-thumb,
+html[data-theme="light"] .hist-thumb,
+html[data-theme="light"] .cl-thumb { background: var(--ink-2); }
+html[data-theme="light"] .lhead { background: var(--ink-1); border-bottom-color: var(--ink-3); }
+html[data-theme="light"] .lrow { border-bottom-color: var(--ink-1); }
+html[data-theme="light"] .lname { color: var(--text); }
+html[data-theme="light"] .lc-played.is-watched { color: #1f8a4c; }
+html[data-theme="light"] .shelf-item,
+html[data-theme="light"] .dupe-item,
+html[data-theme="light"] .shot,
+html[data-theme="light"] .ab-folder,
+html[data-theme="light"] .up-job,
+html[data-theme="light"] .up-option,
+html[data-theme="light"] .check-row { background: rgba(255, 255, 255, 0.6); }
+html[data-theme="light"] .hist-row + .hist-row,
+html[data-theme="light"] .cl-row + .cl-row,
+html[data-theme="light"] .set-row + .set-row,
+html[data-theme="light"] .br-row + .br-row { border-top-color: var(--ink-2); }
+html[data-theme="light"] .br-preview { background: var(--ink-1); }
+html[data-theme="light"] .stats .chart { border-bottom-color: var(--ink-3); background-image: linear-gradient(var(--ink-1) 1px, transparent 1px); }
+html[data-theme="light"] .card.skeleton .thumb,
+html[data-theme="light"] .sk-line { background: var(--ink-2); }
+html[data-theme="light"] .ab-warn { color: #a05a00; }
+html[data-theme="light"] .lock-screen { color: #eef1ff; } /* the lock screen keeps its dark look */
+
+/* The player stays dark on the light theme: dark tokens again inside it. */
+html[data-theme="light"] .player-overlay {
+  --text: #eef1ff; --text-soft: #dfe4f7; --muted: #b8c0dc;
+  --glass: rgba(255, 255, 255, 0.07); --glass-hover: rgba(255, 255, 255, 0.12); --glass-strong: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.16); --glass-border-hover: rgba(255, 255, 255, 0.32); --glass-dark: rgba(10, 13, 28, 0.48);
+  --accent: var(--accent-on-dark); --accent-light: var(--accent-light-on-dark);
+  --danger: #ff8a9a;
+  color: var(--text);
+  color-scheme: dark;
+}
+html[data-theme="light"] .player-overlay .player { background: rgba(16, 20, 40, 0.82); }
+html[data-theme="light"] .player-overlay .btn-ghost,
+html[data-theme="light"] .player-overlay .icon-btn,
+html[data-theme="light"] .player-overlay .chip,
+html[data-theme="light"] .player-overlay .field,
+html[data-theme="light"] .player-overlay .segmented { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); color: var(--text); }
+html[data-theme="light"] .player-overlay .select { background-color: rgba(20,24,46,.7); color: var(--text); }
+html[data-theme="light"] .player-overlay kbd { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.2); color: var(--text); }
+html[data-theme="light"] .player-overlay .star { color: rgba(255,255,255,.28); }
+html[data-theme="light"] .player-overlay .star.is-on { color: #ffd76a; }
+html[data-theme="light"] .player-overlay .switch { background: rgba(255,255,255,.16); }
+html[data-theme="light"] .player-overlay .switch:checked { background: var(--accent-fill); }
+
+/* =========================== Player header: FPS badge =========================== */
+.fps-badge { font-variant-numeric: tabular-nums; }
